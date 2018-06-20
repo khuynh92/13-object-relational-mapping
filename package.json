@@ -1,0 +1,39 @@
+{
+  "name": "13-object-relational-mapping",
+  "version": "1.0.0",
+  "description": "Travis: Heroku: PR:",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "test": "jest --verbose --coverage",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khuynh92/13-object-relational-mapping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khuynh92/13-object-relational-mapping/issues"
+  },
+  "homepage": "https://github.com/khuynh92/13-object-relational-mapping#readme",
+  "devDependencies": {
+    "jest": "^23.1.0",
+    "jest-cli": "^23.1.0"
+  },
+  "dependencies": {
+    "babel-env": "^2.4.1",
+    "babel-eslint": "^8.2.3",
+    "babel-register": "^6.26.0",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "require-dir": "^1.0.0"
+  }
+}
