@@ -39,19 +39,13 @@ router.get('/api/v1/:model/:id', (req, res, next) => {
 });
 
 router.post('/api/v1/:model', (req, res, next) => {
-  console.log('in post');
 
   if (Object.keys(req.body).length === 0) {
     next('400');
   } else {
-    console.log('before save');
     let data = new req.model(req.body);
     data.save()
-      .then(data => {
-        console.log(req.body);
-
-        sendJSON(res, data);
-      })
+      .then(data => sendJSON(res, data))
       .catch(next);
   }
 });
