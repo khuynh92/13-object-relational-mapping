@@ -1,48 +1,31 @@
-![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 13: Single Resource Mongo and Express API
-===
 
-## Submission Instructions
-Follow the instructions in the "Lab Submission Instructions" document in the course reference folder
+[![Build Status](https://travis-ci.com/khuynh92/13-object-relational-mapping.svg?branch=master)](https://travis-ci.com/khuynh92/13-object-relational-mapping)
 
-## Learning Objectives  
-* students will be able to work with the MongoDB database management system
-* students will understand the primary concepts of working with a NoSQL database management system
-* students will be able to create custom data models *(schemas)* through the use of mongoose.js
-* students will be able to use mongoose.js helper methods for interacting with their database persistence layer
+## 12-express-middleware
 
-## Requirements
+  Travis: https://travis-ci.com/khuynh92/13-object-relational-mapping  
+  Heroku: https://khoa-13-object-relational-mapping.herokuapp.com  
+  PR: https://github.com/khuynh92/13-object-relational-mapping/pull/1  
 
-#### Feature Tasks
-* create an HTTP Server using `express`
-* create a resource **model** of your choice that uses `mongoose.Schema` and `mongoose.model`
-* use the `body-parser` express middleware to parse the `req` body on `POST` and `PUT` requests
-* use the npm `debug` module to log the functions and methods that are being used in your application
-* use the express `Router` to create a route for doing **RESTFUL CRUD** operations against your _model_
+  
+in order to run this app:
 
-## Server Endpoints
-### `/api/v1/resource-name`
-* `POST` request
-  * should pass data as stringifed JSON in the body of a post request to create a new resource
-### `api/v1/resource-name`
-* `GET` request
-* Fetch all resources
-### `/api/v1/resource-name/:id`
-* `GET` request
-  * should pass the id of a resource through the url endpoint to get a resource
-    * **this should use `req.params`, not querystring parameters**
-* `PUT` request
-  * should pass data as stringifed JSON in the body of a put request to overwrite a pre-existing resource
-* `DELETE` request
-  * should pass the id of a resource though the url endpoint to delete a resource
-    * **this should use `req.params`**
+ 1. clone this repository
 
-### Tests
-* create a test that will ensure that your API returns a status code of 404 for routes that have not been registered
-* create a series of tests to ensure that your `/api/v1/resource-name` endpoint responds as described for each condition below:
-  * `GET` - test 200, returns a resource with a valid body
- * `GET` - test 404, respond with 'not found' for valid requests made with an id that was not found
- * `PUT` - test 200, returns a resource with an updated body
- * `PUT` - test 400, responds with 'bad request' if no request body was provided
- * `PUT` - test 404, responds with 'not found' for valid requests made with an id that was not found
- * `POST` - test 400, responds with 'bad request' if no request body was provided
- * `POST` - test 200, returns a resource for requests made with a valid body
+ 2. in your root folder, create a .env file and set PORT to your desired port.  example: `PORT = 3000` 
+ 3. in your terminal, locate where you cloned this repository, and then type the command:  
+      `npm start`  
+ 4. in your broswer go to  
+`http://localhost:<YOURPORTHERE>`  
+
+ 5. Here, you can test different RESTful routes to ensure GET requests are working for `/api/v1/pizza`  
+    `http://localhost::<YOURPORTHERE>/api/v1/pizza/<ID>!`   
+
+ 6. To test POST, use your choice of tools that makes requests to servers (httpie, postman). Make sure to send an object body, or a 400 error will appear. POST requests will only work on api/v1/pizza.
+
+ 7. To test DELETE, use your choice of tools that makes requests to servers (httpie, postman). If no id query is passed, a 404 error will appear. DELETE requests will only work on pathnames with id parameters: `api/v1/pizza/<your id here>`.
+
+ 8. To test PUT, use your choice of tools that makes request to servers (httpie, postman). Make sure to send an object body, or a 400 error will appear. Make sure to enter a valid id in the URL, or a 404 error will appear. `api/v1/pizza/<your id here>`
+
+
+This lab was built off of codefellows 14-object-relational-mapping demo code.
