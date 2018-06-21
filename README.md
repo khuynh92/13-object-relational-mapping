@@ -4,7 +4,7 @@
 ## 12-express-middleware
 
   Travis: https://travis-ci.com/khuynh92/13-object-relational-mapping  
-  Heroku: https://khoa-13-object-relational-mapping.herokuapp.com  
+  Heroku: https://khoa-13-obj-rel-mapping.herokuapp.com  
   PR: https://github.com/khuynh92/13-object-relational-mapping/pull/1  
 
   
