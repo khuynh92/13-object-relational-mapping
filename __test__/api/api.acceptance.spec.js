@@ -15,6 +15,9 @@ const { server } = require('../../src/app.js');
 const supertest = superr(server);
 
 
+afterAll(() => {
+  mongoose.connection.close();
+});
 
 describe('api module', () => {
 
