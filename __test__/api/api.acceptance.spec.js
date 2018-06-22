@@ -14,6 +14,8 @@ const { server } = require('../../src/app.js');
 
 const supertest = superr(server);
 
+jest.setTimeout(30000);
+
 
 afterAll(() => {
   mongoose.connection.close();
